@@ -1,5 +1,4 @@
 class QuestionsController < ApplicationController
-
   def ask
   end
 
@@ -8,15 +7,13 @@ class QuestionsController < ApplicationController
     @answer = ""
     if @question
       if @question == "I am going to work"
-        @answer = "Great!"
-       @answer
+        return @answer = "Great!"
        elsif @question.end_with?('?')
-       @answer = "Silly question, get dressed and go to work!"
-        @answer
+        return @answer = "Silly question, get dressed and go to work!"
       else
-       @answer = "I don't care, get dressed and go to work!"
-        @answer
+        return @answer = "I don't care, get dressed and go to work!"
       end
     end
   end
+
 end
